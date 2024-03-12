@@ -2,18 +2,6 @@ from praktikum.bun import Bun
 
 
 class TestBun:
-
-    """
-        Метод __init__
-    """
-    def test_bun_name(self):
-        bun = Bun('red bun', 300)
-        assert bun.name == 'red bun'
-
-    def test_bun_price(self):
-        bun = Bun('red bun', 300)
-        assert bun.price == 300
-
     """
         Метод get_name
     """

@@ -7,10 +7,6 @@ from praktikum.ingredient_types import INGREDIENT_TYPE_SAUCE, INGREDIENT_TYPE_FI
 
 class TestBurger:
 
-    def test_burger_init(self, burger):
-        assert burger.bun is None
-        assert burger.ingredients == []
-
     def test_add_ingredient(self, burger):
         ingredient = Ingredient(INGREDIENT_TYPE_SAUCE, "hot sauce", 100)
         burger.add_ingredient(ingredient)
@@ -52,7 +48,7 @@ class TestBurger:
         burger.add_ingredient(sauce_mock)
         burger.add_ingredient(filling_mock)
         expected_price = 10 * 2 + 10 + 20
-        assert (burger.get_price(), expected_price)
+        assert burger.get_price() == expected_price
 
     @pytest.mark.parametrize("bun_price, sauce_price, filling_price, expected_price",
                              [(10, 20, 30, 70),

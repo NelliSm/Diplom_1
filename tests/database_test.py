@@ -16,7 +16,7 @@ class TestDataBase:
         available_ingredients = data_ingredients.available_ingredients()
         assert len(available_ingredients) == 6
 
-    def test_get_quantity_available_sauses(self):
+    def test_get_quantity_available_sauces(self):
         quantity_ingredients = Database()
         ingredients = quantity_ingredients.available_ingredients()
         type_sauce = [i for i in ingredients if i.get_type() == INGREDIENT_TYPE_SAUCE]
